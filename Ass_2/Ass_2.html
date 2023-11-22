@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ass_2</title>
+  </head>
+  <body>
+    <!-- <header ">Calculator</header> -->
+    <div style="border: double; background-color: aqua">
+      <center>
+        <h1>Calculator</h1>
+        <div style="font-size: x-large">
+          Enter Number 1:
+          <input type="number" id="numberone" />
+        </div>
+        <br />
+        <div style="font-size: x-large">
+          Enter Number 2:
+          <input type="number" id="numbertwo" />
+        </div>
+        <br />
+        <div style="font-size: x-large">
+          Result:
+          <input type="number" id="result" readonly />
+        </div>
+        <br />
+        <input
+          type="button"
+          value="Addition"
+          id="add"
+          onclick="add()"
+          style="font-size: x-large; background-color: azure"
+        />
+        <input
+          type="button"
+          value="Subtraction"
+          id="add"
+          onclick="subtraction()"
+          style="font-size: x-large; background-color: rgb(155, 84, 84)"
+        />
+        <input
+          type="button"
+          value="Multiplication"
+          id="add"
+          onclick="multiply()"
+          style="font-size: x-large; background-color: rgb(94, 138, 138)"
+        />
+        <input
+          type="button"
+          value="Division"
+          id="add"
+          onclick="divide()"
+          style="font-size: x-large; background-color: rgb(89, 159, 159)"
+        />
+
+        <input
+          type="button"
+          value="Clear"
+          id="clean"
+          onclick="reset()"
+          style="font-size: x-large"
+        />
+      </center>
+    </div>
+    <script>
+      function reset() {
+        document.getElementById("numberone").value = "";
+        document.getElementById("numbertwo").value = "";
+        document.getElementById("result").value = "";
+      }
+      function add() {
+        var num1 = document.getElementById("numberone");
+        var num2 = document.getElementById("numbertwo");
+
+        var result = document.getElementById("result");
+
+        result.value = Number(num1.value) + Number(num2.value);
+      }
+
+      function subtraction() {
+        var num1 = document.getElementById("numberone");
+        var num2 = document.getElementById("numbertwo");
+
+        var result = document.getElementById("result");
+
+        result.value = Number(num1.value) - Number(num2.value);
+      }
+      function multiply() {
+        var num1 = document.getElementById("numberone");
+        var num2 = document.getElementById("numbertwo");
+
+        var result = document.getElementById("result");
+
+        result.value = Number(num1.value) * Number(num2.value);
+      }
+      function divide() {
+        var num1 = document.getElementById("numberone");
+        var num2 = document.getElementById("numbertwo");
+
+        var result = document.getElementById("result");
+
+        result.value = Number(num1.value) / Number(num2.value);
+      }
+    </script>
+  </body>
+</html>
